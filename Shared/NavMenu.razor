@@ -1,0 +1,21 @@
+﻿<MudDrawer @bind-Open="SideBarOpen" Elevation="1">
+    <MudDrawerHeader>
+        <MudAvatar Color="Color.Transparent" Size="Size.Large" Image="images/books.png" />
+        <MudText Typo="Typo.h5" Color="Color.Primary" Style="margin-top:10px; margin-left:15px;">Learn On</MudText>
+    </MudDrawerHeader>
+    <MudNavMenu>
+        <MudNavLink Href="/" Match="NavLinkMatch.All" Icon="@Icons.Filled.Home">Home</MudNavLink>
+        <MudNavGroup Title="Mathematics Videos" Icon="@Icons.Filled.OndemandVideo" Expanded="true">
+                <MudNavLink Href="videos/ArithProg">Arithmetic Progression</MudNavLink>
+                <MudNavLink Href="videos/Probability">Probability</MudNavLink>
+                <MudNavLink Href="videos/Statistics">Statistics</MudNavLink>
+         </MudNavGroup>
+    </MudNavMenu>
+</MudDrawer>
+
+@code {
+    [Parameter]
+    public bool SideBarOpen { get; set; }
+}
+
+

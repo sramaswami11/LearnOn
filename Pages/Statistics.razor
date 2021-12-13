@@ -1,0 +1,35 @@
+﻿@page "/statistics"
+@using LearnOn.Components
+@using LearnOn.Common
+@inject IJSRuntime js;
+
+<h3>Statistics</h3>
+
+<div style="display: flex; flex-direction: row; flex-wrap: wrap;">
+    
+    @*@foreach (var lesson in Lesson.Collection.Where(x => x.Adhikaram.ToString() == key1))*@
+    @foreach (var lesson in Data.Lesson.Collection)
+    {
+    <TheCard HeaderText="@lesson.Title">
+        <b>@lesson.Description</b><br /><br />
+        
+        <button class="btn btn-primary mr-15" @onclick="() => jsObj.PlayVideo(lesson.VideoLink)">Watch In English</button>
+        @if (!string.IsNullOrEmpty(lesson.VideoLink_KA))
+            {
+             <button class="btn btn-primary" @onclick="() => jsObj.PlayVideo(lesson.VideoLink_KA)">Watch In Kannada</button>
+            }
+       
+    </TheCard>
+    }
+</div>
+
+@code {
+    
+    private CallJavascript jsObj;
+
+    protected override void OnInitialized()
+    {
+        jsObj = new CallJavascript(js);
+    }
+
+}

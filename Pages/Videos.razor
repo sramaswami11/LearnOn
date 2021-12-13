@@ -1,0 +1,51 @@
+﻿@*@page "/kuratkal/{key1?}/"*@
+@*@page "/videos"*@
+@page "/videos/{key1?}/"
+@using LearnOn.Common
+@using LearnOn.Components
+@using LearnOn.Data
+
+@inject IJSRuntime js;
+
+<h3>Videos</h3>
+
+<div style="display: flex; flex-direction: row; flex-wrap: wrap;">
+    @{
+        var lessons = Lesson.Collection.Where(x => x.ChapterId.ToString() == key1);
+    }
+    @if (lessons.Count() < 1)
+    {
+            <MudText Align="Align.Center" Typo="Typo.h5" Color="Color.Primary">
+                Sorry, no videos have been created on this topic so far.
+                <br /> Please check back here again later.
+            </MudText>
+    }
+    else
+    {
+        @foreach (var lesson in Lesson.Collection.Where(x => x.ChapterId.ToString() == key1))
+        {
+            <TheCard HeaderText="@lesson.Title">
+                <b>@lesson.Description</b><br /><br />
+                <button class="btn btn-primary mr-15" @onclick="() => jsObj.PlayVideo(lesson.VideoLink)">Watch</button>
+                @if (!string.IsNullOrEmpty(lesson.VideoLink_KA))
+                {
+                    <button class="btn btn-primary" @onclick="() => jsObj.PlayVideo(lesson.VideoLink_KA)">Watch In Kannada</button>
+                }
+            </TheCard>
+        }
+    }
+</div>
+
+@code {
+    [Parameter]
+    public string key1 { get; set; }
+
+    private CallJavascript jsObj;
+
+    protected override void OnInitialized()
+    {
+        Console.WriteLine($"key1 =" + key1);
+        jsObj = new CallJavascript(js);
+    }
+
+}
