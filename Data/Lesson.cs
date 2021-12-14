@@ -18,11 +18,14 @@ namespace LearnOn.Data
 
         public enum ChapterEnum
         {
-            //[Description("கடவுள் வாழ்த்து")]
-            Statistics,
+            
+            
+            //[Description("Arithmetic Progressions")]
             ArithProg,
             Probability,
-            QuadEquation
+            QuadEquation,
+            Statistics,
+            Trigonometry
         }
 
         public static readonly Lesson[] Collection
@@ -101,9 +104,69 @@ namespace LearnOn.Data
                Title="Karnataka SSLC Arithmetic Progression Introduction",
                Description="Concepts of Arithmetic Progression Different type of Arithmetic Progression Example – Find Nth Value of Arithmetic Progression Example – Given the Nth Value, Find the Value of Nth in the sequence",
                VideoLink = "https://youtu.be/-woagBi_wNY",
+               VideoLink_KA = "https://youtu.be/0xYI1za7H-k"
+            },
+             new Lesson //2
+            {
+               ChapterId = ChapterEnum.ArithProg,
+               ChapterName = "Arithmetic Progression",
+               Title="Arithmetic Progression - Calculate Sum",
+               Description="Learning objective and Summary of the Presentation Approach of Arithmetic Progression – Calculate sum of N Terms Example – Calculate sum of N Terms Problem Solving – Arithmetic Progression",
+               VideoLink = "https://youtu.be/j64hoAZq8Us",
+               VideoLink_KA = "https://youtu.be/ZKgZqMkECOU"
+            },
+             //End Arithmetic Progression
+             //Start Probability
+            new Lesson //1
+            {
+               ChapterId = ChapterEnum.Probability,
+               ChapterName = "Probability",
+               Title="Probability Lesson 1 Lets talk about Probability V3",
+               Description="Introduction to Probability",
+               VideoLink = "https://youtu.be/y79dSPIJXfs",
                VideoLink_KA = ""
-            }
-
+            },
+            new Lesson //2
+            {
+               ChapterId = ChapterEnum.Probability,
+               ChapterName = "Probability",
+               Title="Probability Lesson 2 9th Std probability recap Part1",
+               Description="Recap of what we studied in the 9th std Probability class",
+               VideoLink = "https://youtu.be/HK_3FQ2yj70",
+               VideoLink_KA = ""
+            },
+            new Lesson //3
+            {
+               ChapterId = ChapterEnum.Probability,
+               ChapterName = "Probability",
+               Title="Probability Lesson 2 9th Std Probability recap Part2",
+               Description="Recap of what we studied in 9th Std Probability class",
+               VideoLink = "https://youtu.be/v-KOvslSr5c",
+               VideoLink_KA = ""
+            },
+            //End Probability
+            //Start Quadratic Equations
+             new Lesson //1
+            {
+               ChapterId = ChapterEnum.QuadEquation,
+               ChapterName = "Quadratic Equations",
+               Title="Quadratic Equations Lesson1 Introduction to Quadratic Equations",
+               Description="Basic introduction of quadratic equations. Starts with definition , then we go on to give some examples on how to represent some common life situations as quadratic equations and then proceed to take some example equations and determine whether they are quadratic or not.",
+               VideoLink = "https://youtu.be/RurylNDTZUw",
+               VideoLink_KA = ""
+            },
+             //End Quadratic Equations
+             //Start Trigonometry
+             new Lesson //1
+            {
+               ChapterId = ChapterEnum.Trigonometry,
+               ChapterName = "Trigonometry",
+               Title="Trigonometry Lesson1:  Why Trigonometry?",
+               Description="This is an introductory lesson explaining what trigonometry is and why trigonometry is useful in real life.   It covers part of Chapter 11 in the Karnataka SSLC Std X Mathematics textbook.",
+               VideoLink = "https://youtu.be/8PRpycNhMjw",
+               VideoLink_KA = ""
+            },
+             //End Trigonometry
        };
     }
 }
