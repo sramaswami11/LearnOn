@@ -104,6 +104,22 @@
     "VideoLink_KA": ""
   },
   {
+    "ChapterId": 1,
+    "ChapterName": "Probability",
+    "Title": "Probability Lesson 4 Event Types Part1",
+    "Description": "We will be discussing the types of events in probability, mainly focusing on Elementary Events or Simple Events with some examples.",
+    "VideoLink": "https://youtu.be/swkB0dVJkYo",
+    "VideoLink_KA": ""
+  },
+  {
+    "ChapterId": 1,
+    "ChapterName": "Probability",
+    "Title": "Probability Lesson 4 Event Types Part2",
+    "Description": "In this video, we will be talking about events with multiple outcomes.",
+    "VideoLink": "https://youtu.be/PwtuPasHSRI",
+    "VideoLink_KA": ""
+  },
+  {
     "ChapterId": 2,
     "ChapterName": "Quadratic Equations",
     "Title": "Quadratic Equations Lesson1 Introduction to Quadratic Equations",
