@@ -8,7 +8,8 @@
 <div style="display: flex; flex-direction: row; flex-wrap: wrap;">
     
     @*@foreach (var lesson in Lesson.Collection.Where(x => x.Adhikaram.ToString() == key1))*@
-    @foreach (var lesson in Data.Lesson.Collection)
+    
+   @foreach (var lesson in Data.Lesson.Collection)
     {
     <TheCard HeaderText="@lesson.Title">
         <b>@lesson.Description</b><br /><br />
