@@ -25,7 +25,10 @@ namespace LearnOn.Data
             Probability,
             QuadEquation,
             Statistics,
-            Trigonometry
+            Trigonometry,
+            Circles,
+            CircleAreas
+
         }
 
         public static readonly Lesson[] Collection
@@ -142,6 +145,15 @@ namespace LearnOn.Data
                Title="Probability Lesson 2 9th Std Probability recap Part2",
                Description="Recap of what we studied in 9th Std Probability class",
                VideoLink = "https://youtu.be/v-KOvslSr5c",
+               VideoLink_KA = ""
+            },
+             new Lesson //4
+            {
+               ChapterId = ChapterEnum.Probability,
+               ChapterName = "Probability",
+               Title="Probability Lesson3 Theoretical Probability",
+               Description="We start with some definitions to gain grounding for the concept of theoretical probability, then recap what we learned about Empirical probability from the previous lesson, discuss some shortcomings of Empirical  Probability, then move on to  focus on Theoretical Probability that alleviates issues we discussed about Empirical probability.",
+               VideoLink = "https://youtu.be/eepe730PbHE",
                VideoLink_KA = ""
             },
             //End Probability

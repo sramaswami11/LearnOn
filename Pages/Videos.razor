@@ -4,24 +4,36 @@
 @using LearnOn.Common
 @using LearnOn.Components
 @using LearnOn.Data
+@using static LearnOn.Data.Lesson
 
 @inject IJSRuntime js;
 
-<h3>Videos</h3>
+@if (string.IsNullOrEmpty(chapterLookup[key1]))
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <h3>@chapterLookup[key1]</h3>
+}
+
 
 <div style="display: flex; flex-direction: row; flex-wrap: wrap;">
     @{
+
         var lessons = Lesson.Collection.Where(x => x.ChapterId.ToString() == key1);
+        
     }
     @if (lessons.Count() < 1)
     {
             <MudText Align="Align.Center" Typo="Typo.h5" Color="Color.Primary">
-                Sorry, no videos have been created on this topic so far.
-                <br /> Please check back here again later.
+                Sorry, no videos have been created on this topic so far. Please check back here again later.
+               
             </MudText>
     }
     else
     {
+       
         @foreach (var lesson in Lesson.Collection.Where(x => x.ChapterId.ToString() == key1))
         {
             <TheCard HeaderText="@lesson.Title">
@@ -42,10 +54,30 @@
 
     private CallJavascript jsObj;
 
+    private string title { get; set; }
+
+    //Dictionary<string, string> My_dict2 =  
+    //          new Dictionary<string, string>(){
+    //                              {"a.1", "Dog"},
+    //                              {"a.2", "Cat"},
+    //                            {"a.3", "Pig"} }; 
+
+    private Dictionary<string, string> chapterLookup = new Dictionary<string, string>()
+    {
+        {ChapterEnum.ArithProg.ToString(),"Arithmetic Progressions"},
+        {ChapterEnum.Probability.ToString(),"Probability"},
+        {ChapterEnum.QuadEquation.ToString(),"Quadratic Equations"},
+        {ChapterEnum.Statistics.ToString(),"Statistics"},
+        {ChapterEnum.Trigonometry.ToString(),"Trigonometry"},
+        {ChapterEnum.Circles.ToString(),"Circles"},
+        {ChapterEnum.CircleAreas.ToString(),"Circles And Areas"}
+    };
+
     protected override void OnInitialized()
     {
         Console.WriteLine($"key1 =" + key1);
         jsObj = new CallJavascript(js);
     }
+
 
 }
