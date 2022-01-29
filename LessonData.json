@@ -136,11 +136,43 @@
     "VideoLink_KA": ""
   },
   {
+    "ChapterId": 2,
+    "ChapterName": "Quadratic Equations",
+    "Title": "Quadratic Equations Lesson3 Solving Quadratic Equation By Completing Square",
+    "Description": "We are starting with giving a visualization of what happens during the process of completing a square in determining the roots of a quadratic equation and then how to solve it from there. We are also addressing in this video how to solve the quadratic equation with the coefficient of X^2 not a perfect square. Finally we are also talking about quadratic equations with no real roots with an example.",
+    "VideoLink": "https://youtu.be/kOSsDP0OTIY",
+    "VideoLink_KA": ""
+  },
+  {
+    "ChapterId": 2,
+    "ChapterName": "Quadratic Equations",
+    "Title": "Quadratic Equations Lesson4  Solving Quadratic Equation By Formula",
+    "Description": "In this video we will first derive the quadratic formula and then apply it to solve a couple of QEs. Then we talk about discriminant and discuss the nature of roots of a QE using the discriminant without having to solve the equation.",
+    "VideoLink": "https://youtu.be/x6-_jQ0zVW0",
+    "VideoLink_KA": ""
+  },
+  {
     "ChapterId": 4,
     "ChapterName": "Trigonometry",
     "Title": "Trigonometry Lesson1:  Why Trigonometry?",
     "Description": "This is an introductory lesson explaining what trigonometry is and why trigonometry is useful in real life.   It covers part of Chapter 11 in the Karnataka SSLC Std X Mathematics textbook.",
     "VideoLink": "https://youtu.be/8PRpycNhMjw",
+    "VideoLink_KA": ""
+  },
+  {
+    "ChapterId": 4,
+    "ChapterName": "Trigonometry",
+    "Title": "Trigonometry Lesson 2:  Defining Ratios",
+    "Description": "This lesson introduces the six basic trigonometric ratios.  It covers part of Chapter 11 in the Karnataka SSLC Std X Mathematics textbook.",
+    "VideoLink": "https://youtu.be/3Xa6f_5VDY4",
+    "VideoLink_KA": ""
+  },
+  {
+    "ChapterId": 4,
+    "ChapterName": "Trigonometry",
+    "Title": "Trigonometry Lesson 3: Calculating Ratios for some angles",
+    "Description": "This lesson shows how to calculate basic trigonometric ratios for specifc examples.  It covers part of Chapter 11 in the Karnataka SSLC Std X Mathematics textbook.",
+    "VideoLink": "https://youtu.be/Wi3EJW8hlp4",
     "VideoLink_KA": ""
   }
 ]
